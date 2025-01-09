@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 210mm;
+  height: 297mm; /* A4 format */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* App.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-frame {
+  border: 4px solid #1a202c; /* Jiddiy qora chegara */
+  border-radius: 12px; /* Yumaloq burchaklar */
+  padding: 20px;
+  background: linear-gradient(
+    145deg,
+    #f0f0f0,
+    #d9d9d9
+  ); /* Chiroyli gradient fon */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Qalin va jiddiy soyalar */
+  max-width: 90%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-frame:hover {
+  transform: scale(1.02); /* Hoverda biroz kattalashadi */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Hoverda yanada qalin soya */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rasimning yumaloq burchaklari */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e5e5e5; /* Orqa fonni ochiq rangda saqlash */
+}
+
+html,
+body {
+  height: 100%;
+}
